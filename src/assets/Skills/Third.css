@@ -1,0 +1,82 @@
+
+.video-background-container {
+    position: relative;
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    height: 100%; 
+    overflow-x: auto; 
+  }
+  
+  .hw {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: -30px;
+  }
+  
+  .hw:hover {
+    transform: scale(1.1);
+    color: blue;
+  }
+  
+  .learning-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    /* gap: 20px; */
+  
+    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .learning-item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    transform: scale(1);
+    width: 100%;
+  }
+  
+  .learning-item.active {
+    transform: scale(1.05);
+  }
+  
+  .learning-item:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+  }
+  
+  .tech-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+  
+  .tech-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    transition: color 0.3s ease-in-out;
+  }
+  
+  .learning-item:hover .tech-title {
+    color: blue;
+  }
+  
+  .tech-description {
+    font-size: 14px;
+    color: #555;
+    /* line-height: 1.6; */
+  }
+  
+  
+  

@@ -1,0 +1,122 @@
+/* General Page Styles */
+.contact-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: #f7f7f7; /* Light background color */
+    margin: 0;
+  }
+  
+  /* Card Styling */
+  .contact-card {
+    background-color: #ffffff; /* White background for the card */
+    border-radius: 12px;
+    padding: 40px 60px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 600px; /* Limit width for better readability */
+    text-align: center;
+    font-family: 'Arial', sans-serif; /* Use a clean font */
+    transition: transform 0.3s ease; /* Smooth transition for card hover */
+  }
+  
+  /* Hover effect for the card */
+  .contact-card:hover {
+    transform: translateY(-10px); /* Subtle card lift effect */
+  }
+  
+  /* Title Styling */
+  .contact-title {
+    font-size: 2.9rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+  
+  /* Container for contact items */
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center; /* Center align items */
+  }
+  
+  /* Individual contact item styling */
+  .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 1.2rem;
+    color: #444;
+    transition: transform 0.3s ease;
+  }
+  
+  /* Hover effect for individual items */
+  .contact-item:hover {
+    transform: translateX(5px); /* Slight horizontal shift on hover */
+  }
+  
+  /* Icon Styling */
+  .contact-item svg {
+    color: blue; /* Primary color for icons */
+    transition: color 0.3s ease;
+    width: 45px;
+    height: 45px;
+  }
+  
+  /* Text Styling for contact methods */
+  .contact-text {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+  }
+  
+  .contact-text:hover {
+    color: blue; /* Change color on hover */
+    font-weight: 600; /* Bold text on hover */
+  }
+  
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    .contact-title {
+      font-size: 2rem; /* Adjust title font size for smaller screens */
+    }
+  
+    .contact-info {
+      gap: 20px;
+    }
+  
+    .contact-item {
+      font-size: 1rem; /* Adjust item font size */
+    }
+  
+    .contact-item svg {
+      width: 40px; /* Adjust icon size */
+      height: 40px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .contact-title {
+      font-size: 1.5rem; /* Smaller title for small screens */
+    }
+  
+    .contact-info {
+      gap: 15px;
+    }
+  
+    .contact-item {
+      font-size: 0.9rem; /* Further adjust item font size */
+    }
+  
+    .contact-item svg {
+      width: 35px; /* Further adjust icon size */
+      height: 35px;
+    }
+  }
+  
