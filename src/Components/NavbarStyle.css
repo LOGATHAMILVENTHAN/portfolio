@@ -1,3 +1,9 @@
 .navweb {
-    padding-top: 60px; /* Adjust this value if needed */
+    padding-top: 100px; /* Adjust this value if needed */
+    background-color: black;
+}
+@media (max-width: 1440px) {
+   .navbar-container{
+    display: hide;
+   } 
 }

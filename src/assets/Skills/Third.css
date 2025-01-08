@@ -1,82 +1,152 @@
+/* .skill */
+.skill {
+  margin-left:565px;
+  margin-top: 30px;
+}
 
-.video-background-container {
-    position: relative;
-    padding: 40px 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    height: 100%; 
-    overflow-x: auto; 
+/* Background third section */
+.background-third {
+  position: relative;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100vw;
+  height: 100vh;
+  overflow-x: auto;
+}
+
+/* Heading */
+.hw {
+  font-size: 2.5rem;
+  text-align: center;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: -30px;
+}
+
+.hw:hover {
+  transform: scale(1.1);
+  color: blue;
+}
+
+/* Learning container (grid setup) */
+.learning-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Adjusting grid to be flexible */
+  gap: 20px; /* Added gap for better spacing */
+  background-color: #121212;
+  justify-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Learning item (individual card styles) */
+.learning-item {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  transform: scale(1);
+  width: 100%;
+}
+
+.learning-item.active {
+  transform: scale(1.05);
+}
+
+.learning-item:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
+}
+
+/* Tech icon styles */
+.tech-icon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Tech title styles */
+.tech-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: white;
+  transition: color 0.3s ease-in-out;
+}
+
+.learning-item:hover .tech-title {
+  color: blue;
+}
+
+/* Tech description styles */
+.tech-description {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Mobile Responsive Styles */
+
+/* For small devices like Android phones (width <= 480px) */
+@media (max-width: 480px) {
+  .skill {
+    margin-left: 120px;
+    margin-top: 30px;
   }
-  
   .hw {
-    font-size: 2.5rem;
-    text-align: center;
-    font-weight: 600;
-    color: black;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    margin-top: -30px;
+    font-size: 1.8rem; /* Decreasing font size */
+    letter-spacing: 2px; /* Adjusting letter spacing */
   }
-  
-  .hw:hover {
-    transform: scale(1.1);
-    color: blue;
-  }
-  
+
   .learning-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    /* gap: 20px; */
-  
-    justify-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    grid-template-columns: 1fr; /* Single column for better fit on small screens */
+    padding: 10px; /* Reduced padding */
   }
-  
+
   .learning-item {
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-    transform: scale(1);
-    width: 100%;
+    padding: 15px; /* Reduced padding */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Lighter shadow */
   }
-  
-  .learning-item.active {
-    transform: scale(1.05);
-  }
-  
-  .learning-item:hover {
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
-  }
-  
-  .tech-icon {
-    width: 50px;
-    height: 50px;
-    object-fit: contain;
-  }
-  
+
   .tech-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: white;
-    transition: color 0.3s ease-in-out;
+    font-size: 1.3rem; /* Decreasing font size for smaller screens */
   }
-  
-  .learning-item:hover .tech-title {
-    color: blue;
-  }
-  
+
   .tech-description {
-    font-size: 14px;
-    color: #555;
-    /* line-height: 1.6; */
+    font-size: 12px; /* Smaller text for descriptions */
   }
-  
-  
-  
+}
+
+/* For larger mobile screens (width <= 768px - tablets, small tablets) */
+@media (max-width: 768px) {
+  .skill {
+    margin-left: 120px;
+    margin-top: 30px;
+  }
+  .hw {
+    font-size: 2rem; /* Slightly smaller font size for tablets */
+    letter-spacing: 2px;
+  }
+
+  .learning-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust grid for tablet */
+  }
+
+  .learning-item {
+    padding: 18px; /* Slightly smaller padding for tablet */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Medium shadow */
+  }
+
+  .tech-title {
+    font-size: 1.4rem; /* Slightly smaller font size */
+  }
+
+  .tech-description {
+    font-size: 13px; /* Small text for descriptions */
+  }
+}
+

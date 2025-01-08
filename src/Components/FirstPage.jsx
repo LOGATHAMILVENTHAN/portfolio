@@ -1,5 +1,4 @@
-import { color, motion } from 'framer-motion'; // Import Framer Motion for animations
-import React from 'react';
+import { color, motion } from 'framer-motion';
 import './First.css'
 import { Container, Row, Col, Button } from 'react-bootstrap';
 import AboutMe from '../assets/About/SecondPage';
@@ -12,7 +11,7 @@ const FirstPage = () => {
 
     <div className="video-background-container">
 
-      <Container className="video-content">
+    
         <Row>
           <Col md={6} className="text-center">
 
@@ -23,6 +22,7 @@ const FirstPage = () => {
                   initial={{ opacity: 0, y: 50 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{
+                   
                     delay: index * 0.1,
                     type: "spring",
                     damping: 25,
@@ -32,8 +32,8 @@ const FirstPage = () => {
                   }}
                   style={{
                     color: 'yellow',  // Set the text color to yellow
-                    textShadow: '2px 2px 5px blue', 
-                    textShadow: '2px 2px 5px blue' // Add a blue shadow to the text
+                    textShadow: '2px 2px 5px white', 
+                    textShadow: '2px 2px 5px white' // Add a blue shadow to the text
                   }}
                 >
                   {letter}
@@ -44,7 +44,7 @@ const FirstPage = () => {
             {/* Animated Paragraph (Portfolio) */}
         
             <motion.h1 className="text-name">
-              {Array.from('PORTFOLIO').map((letter, index) => (
+              {Array.from('Mern Stack Developer').map((letter, index) => (
                 <motion.span
                   key={index}
                   initial={{ opacity: 0, y: 50 }}
@@ -58,9 +58,9 @@ const FirstPage = () => {
                     repeatType: "reverse"  // Make it move up and down in a wave
                   }}
                   style={{
-                    color: 'BLUE',  // Set the text color to yellow
-                    textShadow: '2px 2px 5px blue', 
-                    textShadow: '2px 2px 5px blue' // Add a blue shadow to the text
+                    color: 'blue',  // Set the text color to yellow
+                    textShadow: '2px 2px 5px white', 
+                    textShadow: '2px 2px 5px white' // Add a blue shadow to the text
                   }}
                 >
                   {letter}
@@ -78,13 +78,31 @@ const FirstPage = () => {
 
           </Col>
         </Row>
-      </Container>
+    
+<hr style={{color : "white"}}/>
+
+      {/* About Page */}
       <div style={{backgroundColor : "black", color : "white"}}>
       <AboutMe />
       </div>
-      <ThirdPage/>
-      <Mainpage/>
-      <Contactlog/>
+      <hr style={{color : "white"}}/>
+
+      {/* Skill Page */}
+      <div >  
+        <ThirdPage/>
+      </div>
+      <hr style={{color : "white"}}/>
+
+      {/* project page */}
+      <div>
+        <Mainpage/>
+      </div>
+      <hr style={{color : "white"}}/>
+
+      {/* Contact */}
+      <div>
+        <Contactlog/>
+      </div>
     </div>
   );
 };

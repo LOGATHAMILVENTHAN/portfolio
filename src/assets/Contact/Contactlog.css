@@ -1,122 +1,189 @@
 /* General Page Styles */
 .contact-page {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100vw;
-    background-color: #f7f7f7; /* Light background color */
-    margin: 0;
-  }
-  
-  /* Card Styling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: auto;
+  width: 100vw;
+  background-color:black;
+  margin: 0;
+  padding: 20px; /* Added padding for spacing on smaller devices */
+  box-sizing: border-box;
+}
+
+/* Card Styling */
+.contact-card {
+  margin-top: 50px;
+  background-color: #A9B2C3;
+  border-radius: 12px;
+  padding: 5px 30px; /* Adjusted padding for mobile-first approach */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease;
+  box-sizing: border-box; /* Ensure padding doesn't overflow */
+}
+
+/* Hover effect for the card */
+.contact-card:hover {
+  transform: translateY(-10px);
+}
+
+/* Title Styling */
+.contact-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Container for contact items */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  margin-bottom: 20px; /* Added space below contact items */
+}
+
+/* Individual contact item styling */
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.2rem;
+  color: #444;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for individual items */
+.contact-item:hover {
+  transform: translateX(5px);
+}
+
+/* Icon Styling */
+.contact-item svg {
+  color: blue;
+  transition: color 0.3s ease;
+  width: 45px;
+  height: 45px;
+}
+
+/* Text Styling for contact methods */
+.contact-text {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+.contact-text:hover {
+  color: blue;
+  font-weight: 600;
+}
+
+
+/* Mobile Responsiveness */
+
+/* For tablets (max-width 1024px) */
+@media (max-width: 1440px) {
+ .con{
+  display: hide;
+ }
   .contact-card {
-    background-color: #ffffff; /* White background for the card */
-    border-radius: 12px;
-    padding: 40px 60px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    width: 100%;
-    max-width: 600px; /* Limit width for better readability */
-    text-align: center;
-    font-family: 'Arial', sans-serif; /* Use a clean font */
-    transition: transform 0.3s ease; /* Smooth transition for card hover */
+      padding: 30px 40px; /* Adjust padding for tablets */
   }
-  
-  /* Hover effect for the card */
-  .contact-card:hover {
-    transform: translateY(-10px); /* Subtle card lift effect */
-  }
-  
-  /* Title Styling */
+
   .contact-title {
-    font-size: 2.9rem;
-    font-weight: 600;
-    color: #333;
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+      font-size: 2.5rem; /* Reduce title size for tablets */
   }
-  
-  /* Container for contact items */
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    align-items: center; /* Center align items */
-  }
-  
-  /* Individual contact item styling */
+
   .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 1.2rem;
-    color: #444;
-    transition: transform 0.3s ease;
+      font-size: 1.1rem; /* Slightly reduce font size for items */
   }
-  
-  /* Hover effect for individual items */
-  .contact-item:hover {
-    transform: translateX(5px); /* Slight horizontal shift on hover */
-  }
-  
-  /* Icon Styling */
+
   .contact-item svg {
-    color: blue; /* Primary color for icons */
-    transition: color 0.3s ease;
-    width: 45px;
-    height: 45px;
-  }
-  
-  /* Text Styling for contact methods */
-  .contact-text {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s ease, font-weight 0.3s ease;
-  }
-  
-  .contact-text:hover {
-    color: blue; /* Change color on hover */
-    font-weight: 600; /* Bold text on hover */
-  }
-  
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .contact-title {
-      font-size: 2rem; /* Adjust title font size for smaller screens */
-    }
-  
-    .contact-info {
-      gap: 20px;
-    }
-  
-    .contact-item {
-      font-size: 1rem; /* Adjust item font size */
-    }
-  
-    .contact-item svg {
-      width: 40px; /* Adjust icon size */
+      width: 40px;
       height: 40px;
-    }
   }
-  
-  @media (max-width: 480px) {
-    .contact-title {
-      font-size: 1.5rem; /* Smaller title for small screens */
-    }
-  
-    .contact-info {
-      gap: 15px;
-    }
-  
-    .contact-item {
-      font-size: 0.9rem; /* Further adjust item font size */
-    }
-  
-    .contact-item svg {
-      width: 35px; /* Further adjust icon size */
+}
+
+/* For medium screens (max-width 768px) */
+@media (max-width: 768px) {
+  .con{
+    display: hide;
+   }
+  .contact-card {
+      padding: 25px 40px; /* Slightly smaller padding */
+  }
+
+  .contact-title {
+      font-size: 2rem; /* Smaller title font size */
+  }
+
+  .contact-info {
+      gap: 20px; /* Reduced gap for compact view */
+  }
+
+  .contact-item {
+      font-size: 1rem; /* Reduce font size for mobile */
+  }
+
+  .contact-item svg {
+      width: 35px;
       height: 35px;
-    }
   }
-  
+}
+
+/* For small screens (max-width 480px) */
+@media (max-width: 480px) {
+  .contact-card {
+      padding: 20px 30px; /* Adjust padding for very small screens */
+  }
+
+  .contact-title {
+      font-size: 1.5rem; /* Make title even smaller for small devices */
+  }
+
+  .contact-info {
+      gap: 15px; /* Tighten the space between items */
+  }
+
+  .contact-item {
+      font-size: 0.9rem; /* Further reduce item font size */
+  }
+
+  .contact-item svg {
+      width: 30px;
+      height: 30px;
+  }
+}
+
+/* For extra small screens (max-width 320px) */
+@media (max-width: 320px) {
+  .contact-card {
+      padding: 15px 20px; /* Small padding for very tiny screens */
+  }
+
+  .contact-title {
+      font-size: 1.3rem; /* Further decrease title size */
+  }
+
+  .contact-info {
+      gap: 10px; /* Further decrease space between items */
+  }
+
+  .contact-item {
+      font-size: 0.85rem; /* Minimized font size */
+  }
+
+  .contact-item svg {
+      width: 25px;
+      height: 25px;
+  }
+}

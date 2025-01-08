@@ -1,28 +1,45 @@
 import { motion } from 'framer-motion';
 import React from 'react';
-
+import './Second.css';
 const AboutMe = () => {
   return (
-    <div className="about-container" style={{  margin: '0 auto', padding: '20px' }}>
-      <motion.h1
-        className="about-title"
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        style={{ color: 'yellow', textShadow: '2px 2px 5px blue' }}
+    <div className="about-container" style={{ margin: '0 auto', padding: '20px' }}>
+      <motion.h2
+        className="about-skills-title"
+        initial={{ opacity: 1 }}  // Start fully visible
+        animate={{
+          opacity: [1, 0, 1],  // Make the text blink by toggling opacity from 1 to 0 and back to 1
+        }}
+        transition={{
+          opacity: {
+            repeat: Infinity,  // Make the blinking effect repeat forever
+            repeatType: "loop",  // Infinite looping
+            duration: 1,  // Set the duration of each blink cycle (1 second)
+            ease: "easeInOut",  // Smooth transition for the blinking effect
+          },
+        }}
+        style={{
+          fontSize: '30px',
+          marginTop: '30px',
+          color: 'yellow',       // Text color
+          fontWeight: 'bold',    // Bold font
+          textShadow: '2px 2px 5px rgba(0, 0, 255, 0.6)', // Blue shadow for emphasis
+          letterSpacing: '3px',  // Space out the letters slightly for a modern look
+        }}
       >
-        ABOUT ME
-      </motion.h1>
+       ABOUT ME:
+      </motion.h2>
+
 
       <motion.p
         className="about-intro"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 0.5 }} 
+        transition={{ duration: 1, delay: 0.5 }}
         style={{ fontSize: '18px', lineHeight: '1.6' }}
       >
         Hi, I'm <span style={{ fontWeight: 'bold' }}>LOGATHAMILVENTHAN</span>, a passionate and dedicated web developer
-         with <span style={{fontWeight:'bold'}}>internship experience </span>building modern, responsive, and user-friendly websites and applications. My goal is to create seamless digital experiences that not only look great but are also functional and efficient.
+        with <span style={{ fontWeight: 'bold' }}>internship experience </span>building modern, responsive, and user-friendly websites and applications. My goal is to create seamless digital experiences that not only look great but are also functional and efficient.
       </motion.p>
 
       <motion.p
@@ -32,10 +49,10 @@ const AboutMe = () => {
         transition={{ duration: 1, delay: 1 }}
         style={{ fontSize: '18px', lineHeight: '1.6' }}
       >
-        I specialize in front-end development, crafting visually appealing and interactive interfaces using  
+        I specialize in front-end development, crafting visually appealing and interactive interfaces using
         <span style={{ fontWeight: 'bold' }}> HTML, CSS, JavaScript, and React.js </span>
-         I also have a strong background in back-end development, working with technologies like  
-         <span style={{fontWeight:'bold'}}> Node.js, Express.js and databases such as MongoDB .</span>
+        I also have a strong background in back-end development, working with technologies like
+        <span style={{ fontWeight: 'bold' }}> Node.js, Express.js and databases such as MongoDB .</span>
       </motion.p>
 
       <motion.p
@@ -53,7 +70,7 @@ const AboutMe = () => {
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, delay: 2 }}
-        style={{ fontSize: '29px', marginTop: '30px', color: 'blue', textShadow: '5px 5px 5px yellow' }}
+        style={{ fontSize: '29px', marginTop: '30px', color: 'yellow', textShadow: '2px 2px 2px ' }}
       >
         My Skills:
       </motion.h2>

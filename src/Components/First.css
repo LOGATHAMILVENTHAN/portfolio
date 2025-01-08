@@ -1,58 +1,113 @@
+/* Hide scrollbar and ensure smooth overflow for the body */
+
+*{
+  overflow-x: hidden;
+}
 ::-webkit-scrollbar {
-    display: none;
-    overflow-y: auto;
-    height: 100%; 
-    overflow-x: auto;
-  }
+  display: none;
+  overflow-y: auto;
+  height: 100%;
+  overflow-x: auto;
+}
+
+.video-background-container{
+  background-color: black;
+}
+/* Video background */
+.video-background {
+ 
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
+/* Content positioned over the video */
+.video-content {
+  position: relative;
+  z-index: 10;
   
-  /* VideoBackgr  ound.css */
-  
-  .video-background-container {
-  
-    position: relative;
-    height: 100vh;
-    width: 100vw;
-    overflow: hidden;
-    
-  }
-  
-  .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    
-  }
-  
-  .video-content {
-    position: relative;
-    /* Positions the content on top of the video */
-    z-index: 10;
-    /* Ensures the content stays above the video */
-    padding: 50px;
-  
-  }
-  
+ 
+}
+
+/* Name styling */
+.text-name {
+  text-align: left;
+  font-size: 6rem;
+  position: relative;
+  display: inline-block;
+  font-size: 3rem;
+  margin-left: 100px;
+  /* Adjusting for smaller screens */
+}
+
+/* Portfolio text styling */
+.text-portfolio {
+  color: whitesmoke;
+  margin-right: 500px;
+  font-size: 30px;
+  font-weight: 400;
+  text-shadow: 2px 2px black;
+  /* Adjusting for smaller screens */
+}
+
+/* Button styling */
+.button1 {
+  color: orange;
+}
+
+/* Mobile responsiveness */
+
+/* For small screens (max-width: 768px) */
+@media (max-width: 768px) {
   .text-name {
-    text-align: left;
-    font-size: 6rem;
-    position: relative;
-    display: inline-block;
-    font-size: 3rem;
-    margin-left: 200px;
-  
+    font-size: 4rem; /* Smaller font size for smaller screens */
+    margin-left: 50px; /* Less margin for smaller screens */
   }
-  
+
   .text-portfolio {
-    color: whitesmoke;
-    margin-right: 500px;
-    font-size: 30px;
-    font-weight: 400;
-    text-shadow: 2px 2px black;
+    font-size: 24px; /* Reduce font size for smaller screens */
+    margin-right: 100px; /* Reduce margin for smaller screens */
   }
-  
-  .button1 {
-    color: orange;
+
+  .video-content {
+    padding: 20px; /* Reduce padding for mobile */
   }
+}
+
+/* For very small screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .text-name {
+    font-size: 1.5rem; /* Further reduce font size for small devices */
+    margin-left: 20px; /* Even less margin */
+  }
+
+  .text-portfolio {
+    font-size: 18px; /* Further reduce font size for small devices */
+    margin-right: 50px; /* Even smaller margin */
+  }
+
+  .video-content {
+    padding: 15px; /* Reduce padding further */
+  }
+}
+
+/* For extra small screens (max-width: 320px) */
+@media (max-width: 320px) {
+  .text-name {
+    font-size: 1.5rem; /* Very small font size for extra small screens */
+    margin-left: 10px; /* Tighten the margin for extra small screens */
+  }
+
+  .text-portfolio {
+    font-size: 16px; /* Minimized font size */
+    margin-right: 30px; /* Smaller margin for ultra-small screens */
+  }
+
+  .video-content {
+    padding: 10px; /* Minimal padding for tiny screens */
+  }
+}

@@ -2,12 +2,12 @@
 import React from 'react';
 import { Button, Navbar, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import './NavbarStyle.css';  // Assuming you'll add custom CSS in this file.
+import '../Components/NavbarStyle.css';  // Assuming you'll add custom CSS in this file.
 
 function NavigateBar() {
     return (
         <div className="navweb">
-            <Navbar fixed="top" bg="dark" variant="dark">
+            <Navbar fixed="top" bg="dark" variant="dark" >
                 <Container>
                     <Navbar.Brand href="#">LOGATHAMILVENTHAN</Navbar.Brand>
                     <Link to="/">
