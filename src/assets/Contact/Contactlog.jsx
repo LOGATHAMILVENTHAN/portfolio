@@ -76,8 +76,8 @@ function Contactlog() {
               whileTap={{ scale: 0.95 }}
             >
               <FaEnvelope size={40} />
-              <a href="mailto:your-email@example.com" className="contact-text">
-                EMAIL: logathamilventhan.com
+              <a href="mailto:logathamilventhan@gmail.com" className="contact-text">
+                EMAIL: logathamilventhan@gmail.com
               </a>
             </motion.div>
 
