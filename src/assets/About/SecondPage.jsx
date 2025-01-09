@@ -85,8 +85,8 @@ const AboutMe = () => {
         <li><strong>Front-End:</strong> HTML5, CSS3, JavaScript, React, Vue.</li>
         <li><strong>Back-End:</strong> Node.js, Express.js.</li>
         <li><strong>Databases:</strong> MongoDB.</li>
-        <li><strong>Tools & Technologies:</strong> Git-hub,Post-man,Fire-base.</li>
-        <li><strong>UI/UX:</strong> Framer-motion,React-Bootstrap,Responsive Design.</li>
+        <li><strong>Tools & Technologies:</strong> Github,Postman,Firebase.</li>
+        <li><strong>UI/UX:</strong> Framer motion,React Bootstrap,Responsive Design.</li>
       </motion.ul>
 
       <motion.p

@@ -11,7 +11,7 @@
 }
 
 .video-background-container{
-  background-color: black;
+  background-color: #121212;
 }
 /* Video background */
 .video-background {
@@ -41,6 +41,7 @@
   display: inline-block;
   font-size: 3rem;
   margin-left: 100px;
+  margin-top: 50px;
   /* Adjusting for smaller screens */
 }
 
@@ -58,11 +59,29 @@
 .button1 {
   color: orange;
 }
+.resume{
+  margin-top: 80px;
+}
+@keyframes move {
+  0% {
+    top: -50%;
+    left: -50%;
+  }
+  100% {
+    top: 150%;
+    left: 150%;
+  }
+}
+
 
 /* Mobile responsiveness */
 
 /* For small screens (max-width: 768px) */
 @media (max-width: 768px) {
+  .line{
+   margin-right: 60px;
+   margin-top: -5px;
+  }
   .text-name {
     font-size: 4rem; /* Smaller font size for smaller screens */
     margin-left: 50px; /* Less margin for smaller screens */
@@ -80,6 +99,10 @@
 
 /* For very small screens (max-width: 480px) */
 @media (max-width: 480px) {
+  .line{
+    margin-right: 60px;
+    margin-top: -5px;
+   }
   .text-name {
     font-size: 1.5rem; /* Further reduce font size for small devices */
     margin-left: 20px; /* Even less margin */
@@ -97,6 +120,10 @@
 
 /* For extra small screens (max-width: 320px) */
 @media (max-width: 320px) {
+  .line{
+    margin-right: 60px;
+    margin-top: -5px;
+   }
   .text-name {
     font-size: 1.5rem; /* Very small font size for extra small screens */
     margin-left: 10px; /* Tighten the margin for extra small screens */
@@ -111,3 +138,4 @@
     padding: 10px; /* Minimal padding for tiny screens */
   }
 }
+
