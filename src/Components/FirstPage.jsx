@@ -10,20 +10,26 @@ import Contactlog from '../assets/Contact/Contactlog';
 import { jsPDF } from "jspdf";
 
 const FirstPage = () => {
+  
+
   const handleDownload = () => {
-    
     const doc = new jsPDF();
-
-   
-    doc.text("Resume", 10, 10);
-
     
-    const imagePath = "/src/Images/Resume.png"; 
-
-    doc.addImage(imagePath, "PNG", 10, 20, 180, 160); 
-   
-    doc.save("Logathamilventhan Resume.pdf");
+    doc.text("Resume", 10, 10);
+  
+    const imagePath = "/src/Images/Resume.png";
+  
+    const pageWidth = doc.internal.pageSize.width;
+    const pageHeight = doc.internal.pageSize.height;
+  
+    const imageWidth = pageWidth - 20;
+    const imageHeight = (imageWidth * 160) / 180;
+  
+    doc.addImage(imagePath, "PNG", 10, 20, imageWidth, imageHeight);
+  
+    doc.save("Logathamilventhan_Resume.pdf");
   };
+  
   
   
   return (
