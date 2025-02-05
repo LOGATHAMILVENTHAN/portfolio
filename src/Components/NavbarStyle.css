@@ -1,9 +1,20 @@
-.navweb {
-    padding-top: 100px; /* Adjust this value if needed */
+.navbar {
+    padding-top: 100px;
     background-color: black;
 }
-@media (max-width: 1440px) {
-   .navbar-container{
-    display: hide;
-   } 
+.dropdown{
+    display: none;
+}
+.mobile{
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .webnav{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+    }
 }

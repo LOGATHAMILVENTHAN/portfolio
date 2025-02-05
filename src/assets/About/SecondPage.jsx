@@ -6,25 +6,25 @@ const AboutMe = () => {
     <div className="about-container" style={{ margin: '0 auto', padding: '20px' }}>
       <motion.h2
         className="about-skills-title"
-        initial={{ opacity: 1 }}  // Start fully visible
+        initial={{ opacity: 1 }}  
         animate={{
-          opacity: [1, 0, 1],  // Make the text blink by toggling opacity from 1 to 0 and back to 1
+          opacity: [1, 0, 1],  
         }}
         transition={{
           opacity: {
-            repeat: Infinity,  // Make the blinking effect repeat forever
-            repeatType: "loop",  // Infinite looping
-            duration: 1,  // Set the duration of each blink cycle (1 second)
-            ease: "easeInOut",  // Smooth transition for the blinking effect
+            repeat: Infinity,  
+            repeatType: "loop",  
+            duration: 1,  
+            ease: "easeInOut", 
           },
         }}
         style={{
           fontSize: '30px',
           marginTop: '30px',
-          color: 'yellow',       // Text color
-          fontWeight: 'bold',    // Bold font
-          textShadow: '2px 2px 5px rgba(0, 0, 255, 0.6)', // Blue shadow for emphasis
-          letterSpacing: '3px',  // Space out the letters slightly for a modern look
+          color: 'yellow',       
+          fontWeight: 'bold',   
+          textShadow: '2px 2px 5px rgba(0, 0, 255, 0.6)', 
+          letterSpacing: '3px',  
         }}
       >
        ABOUT ME:

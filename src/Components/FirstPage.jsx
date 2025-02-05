@@ -6,7 +6,26 @@ import ThirdPage from '../assets/Skills/ThirdPAge';
 import Mainpage from '../assets/Projects/Mainpage';
 import Contactlog from '../assets/Contact/Contactlog';
 
+
+import { jsPDF } from "jspdf";
+
 const FirstPage = () => {
+  const handleDownload = () => {
+    
+    const doc = new jsPDF();
+
+   
+    doc.text("Resume", 10, 10);
+
+    
+    const imagePath = "/src/Images/Resume.png"; 
+
+    doc.addImage(imagePath, "PNG", 10, 20, 180, 160); 
+   
+    doc.save("Logathamilventhan Resume.pdf");
+  };
+  
+  
   return (
 
     <div className="video-background-container">
@@ -27,13 +46,13 @@ const FirstPage = () => {
                   type: "spring",
                   damping: 25,
                   stiffness: 150,
-                  repeat: Infinity,  // Repeat the wave animation for each letter
-                  repeatType: "reverse"  // Make it move up and down in a wave
+                  repeat: Infinity, 
+                  repeatType: "reverse"  
                 }}
                 style={{
-                  color: 'yellow',  // Set the text color to yellow
+                  color: 'yellow', 
                   textShadow: '2px 2px 5px white',
-                  textShadow: '2px 2px 5px white' // Add a blue shadow to the text
+                  textShadow: '2px 2px 5px white' 
                 }}
               >
                 {letter}
@@ -64,13 +83,13 @@ const FirstPage = () => {
                   type: "spring",
                   damping: 25,
                   stiffness: 150,
-                  repeat: Infinity,  // Repeat the wave animation for each letter
-                  repeatType: "reverse"  // Make it move up and down in a wave
+                  repeat: Infinity,  
+                  repeatType: "reverse"  
                 }}
                 style={{
-                  color: 'blue',  // Set the text color to yellow
+                  color: 'blue',  
                   textShadow: '2px 2px 5px white',
-                  textShadow: '2px 2px 5px white' // Add a blue shadow to the text
+                  textShadow: '2px 2px 5px white' 
                 }}
               >
                 {letter}
@@ -88,12 +107,9 @@ const FirstPage = () => {
           {/* Animated Button */}
           <div className='resume'>
             <motion.a
-              href="file:///C:/Users/logat/AppData/Local/Microsoft/Windows/INetCache/IE/7DHQOESZ/LOGATHAMILVENTHAN[1].pdf"  // Replace with your actual resume file path
-              download="Resume.pdf"  // The name you want the downloaded file to have
-              style={{
-                textDecoration: 'none', // Remove default underline from anchor tag
-              }}
+            onClick={handleDownload}
             >
+             
               <motion.button
                 style={{
                   padding: '18px 36px',
@@ -111,7 +127,7 @@ const FirstPage = () => {
                   zIndex: 0,
                 }}
                 whileHover={{
-                  scale: 1.1, // Slightly grow the button on hover
+                  scale: 1.1, 
                   boxShadow: '0 0 15px 5px rgba(0, 255, 255, 0.7)', // Glowing box-shadow
                   transition: { duration: 0.3, type: 'spring', stiffness: 300 },
                 }}
@@ -153,9 +169,9 @@ const FirstPage = () => {
 
       {/* Skill Page */}
       <div >
-        <marquee>
-          <ThirdPage />
-        </marquee>
+
+        <ThirdPage />
+
       </div>
       <hr style={{ color: "white" }} />
 

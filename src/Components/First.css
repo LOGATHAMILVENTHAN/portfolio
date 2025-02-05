@@ -1,8 +1,7 @@
-/* Hide scrollbar and ensure smooth overflow for the body */
-
-*{
+* {
   overflow-x: hidden;
 }
+
 ::-webkit-scrollbar {
   display: none;
   overflow-y: auto;
@@ -10,30 +9,24 @@
   overflow-x: auto;
 }
 
-.video-background-container{
+.video-background-container {
   background-color: #121212;
 }
-/* Video background */
+
 .video-background {
- 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
- 
 }
 
-/* Content positioned over the video */
 .video-content {
   position: relative;
   z-index: 10;
-  
- 
 }
 
-/* Name styling */
 .text-name {
   text-align: left;
   font-size: 6rem;
@@ -42,26 +35,24 @@
   font-size: 3rem;
   margin-left: 100px;
   margin-top: 50px;
-  /* Adjusting for smaller screens */
 }
 
-/* Portfolio text styling */
 .text-portfolio {
   color: whitesmoke;
   margin-right: 500px;
   font-size: 30px;
   font-weight: 400;
   text-shadow: 2px 2px black;
-  /* Adjusting for smaller screens */
 }
 
-/* Button styling */
 .button1 {
   color: orange;
 }
-.resume{
+
+.resume {
   margin-top: 80px;
 }
+
 @keyframes move {
   0% {
     top: -50%;
@@ -73,69 +64,65 @@
   }
 }
 
-
-/* Mobile responsiveness */
-
-/* For small screens (max-width: 768px) */
 @media (max-width: 768px) {
-  .line{
-   margin-right: 60px;
-   margin-top: -5px;
+  .line {
+    margin-right: 60px;
+    margin-top: -5px;
   }
+
   .text-name {
-    font-size: 4rem; /* Smaller font size for smaller screens */
-    margin-left: 50px; /* Less margin for smaller screens */
+    font-size: 4rem;
+    margin-left: 50px;
   }
 
   .text-portfolio {
-    font-size: 24px; /* Reduce font size for smaller screens */
-    margin-right: 100px; /* Reduce margin for smaller screens */
+    font-size: 24px;
+    margin-right: 100px;
   }
 
   .video-content {
-    padding: 20px; /* Reduce padding for mobile */
+    padding: 20px;
   }
 }
 
-/* For very small screens (max-width: 480px) */
 @media (max-width: 480px) {
-  .line{
+  .line {
     margin-right: 60px;
     margin-top: -5px;
-   }
+  }
+
   .text-name {
-    font-size: 1.5rem; /* Further reduce font size for small devices */
-    margin-left: 20px; /* Even less margin */
+    font-size: 1.5rem;
+    margin-left: 20px;
   }
 
   .text-portfolio {
-    font-size: 18px; /* Further reduce font size for small devices */
-    margin-right: 50px; /* Even smaller margin */
+    font-size: 18px;
+    margin-right: 50px;
   }
 
   .video-content {
-    padding: 15px; /* Reduce padding further */
+    padding: 15px;
   }
 }
 
-/* For extra small screens (max-width: 320px) */
 @media (max-width: 320px) {
-  .line{
+  .line {
     margin-right: 60px;
     margin-top: -5px;
-   }
+  }
+
   .text-name {
-    font-size: 1.5rem; /* Very small font size for extra small screens */
-    margin-left: 10px; /* Tighten the margin for extra small screens */
+    font-size: 1.5rem;
+    margin-left: 10px;
   }
 
   .text-portfolio {
-    font-size: 16px; /* Minimized font size */
-    margin-right: 30px; /* Smaller margin for ultra-small screens */
+    font-size: 16px;
+    margin-right: 30px;
   }
 
   .video-content {
-    padding: 10px; /* Minimal padding for tiny screens */
+    padding: 10px;
   }
 }
-

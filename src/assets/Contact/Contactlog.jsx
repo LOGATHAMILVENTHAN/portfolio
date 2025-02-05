@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion'; // Import motion for animations
-import './Contactlog.css'; // Import a CSS file for styles
+import './Contactlog.css'; 
 
 // Import icons
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from 'react-icons/fa';
@@ -10,36 +10,32 @@ function Contactlog() {
   return (
     <>
       <div className="contact-page">
-
-
-       
-
         
           <motion.h2
             className="contact"
-            initial={{ opacity: 0, rotate: -90 }}  // Start off-screen with rotation (-90 degrees)
+            initial={{ opacity: 0, rotate: -90 }}  
             animate={{
-              opacity: 1,  // Fade in fully visible
-              rotate: 0,  // Rotate to the normal position (0 degrees)
+              opacity: 1,  
+              rotate: 0,  
             }}
             transition={{
               opacity: {
-                duration: 1.2,  // Time taken for the fade-in effect
-                ease: "easeInOut",  // Smooth fade-in effect
+                duration: 1.2, 
+                ease: "easeInOut", 
               },
               rotate: {
-                duration: 1.5,  // Duration for rotation animation
-                ease: "easeOut",  // Smooth transition for the rotation
+                duration: 1.5,  
+                ease: "easeOut",  
               },
             }}
             style={{
-              fontSize: '40px',  // Set a larger font size for visibility
-              marginTop: '60px',  // Space from top for a clean layout
-              color: 'yellow',  // A warm and inviting color (Tomato)
-              fontWeight: '700',  // Bold text for emphasis
-              letterSpacing: '3px',  // Some spacing for a cleaner look
-              textTransform: 'uppercase',  // Make the text uppercase for a polished appearance
-              textShadow: '4px 4px 15px blue',  // Glowing shadow for text
+              fontSize: '40px',  
+              marginTop: '60px', 
+              color: 'yellow', 
+              fontWeight: '700', 
+              letterSpacing: '3px',  
+              textTransform: 'uppercase', 
+              textShadow: '4px 4px 15px blue',  
             }}
           >
             CONTACT INFO:

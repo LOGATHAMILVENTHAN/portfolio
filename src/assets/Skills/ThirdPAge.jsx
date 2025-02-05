@@ -31,13 +31,13 @@ function ThirdPage() {
                               type: "spring",
                               damping: 25,
                               stiffness: 150,
-                              repeat: Infinity,  // Repeat the wave animation for each letter
-                              repeatType: "reverse"  // Make it move up and down in a wave
+                              repeat: Infinity,  
+                              repeatType: "reverse" 
                             }}
                             style={{
-                              color: 'yellow',  // Set the text color to yellow
+                              color: 'yellow',  
                               textShadow: '2px 2px 5px blue', 
-                              textShadow: '2px 2px 5px blue' // Add a blue shadow to the text
+                              textShadow: '2px 2px 5px blue' 
                             }}
                           >
                             {letter}
@@ -50,7 +50,7 @@ function ThirdPage() {
             className="learning-container"
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', // Dynamic grid with flexible columns
+              gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))', 
               gap: '20px',
               padding: '20px',
               justifyItems: 'center',

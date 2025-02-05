@@ -1,34 +1,54 @@
-
-import React from 'react';
-import { Button, Navbar, Container } from 'react-bootstrap';
+import React, { useState } from 'react'; 
+import { Button, Navbar, Container } from 'react-bootstrap'; 
 import { Link } from 'react-router-dom';
-import '../Components/NavbarStyle.css';  // Assuming you'll add custom CSS in this file.
+import '../Components/NavbarStyle.css';
 
 function NavigateBar() {
-    return (
-        <div className="navweb">
-            <Navbar fixed="top" bg="dark" variant="dark" >
-                <Container>
-                    <Navbar.Brand href="#">LOGATHAMILVENTHAN</Navbar.Brand>
-                    <Link to="/">
-                        <button>HOME</button>
-                    </Link>
-                   <Link to='/Contactlog'>
-                    <button>CONTACT</button>
-                    </Link>
-                    <Link to="/ThirdPage">
-                        <Button variant="outline-warning">SKILLS</Button>
-                    </Link>
+   
 
-                    <Link to="/SecondPage">
-                        <Button variant="outline-secondary">ABOUT</Button>
-                    </Link>
-                    <Link to="/Mainpage">
-                        <Button variant="outline-primary">PROJECT</Button>
-                    </Link>
+    return (
+        <div>
+            <div className="webnav">
+
+                <Navbar fixed="top" bg="dark" variant="dark" >
+                    <Container>
+
+                        <Navbar.Brand href="#">PORTFOLIO</Navbar.Brand>
+
+                        {/* Regular navbar items */}
+                        <Link to="/" className="nav-link">
+                            <button>HOME</button>
+                        </Link>
+                        <Link to='/Contactlog' className="nav-link">
+                            <button>CONTACT</button>
+                        </Link>
+                        <Link to="/ThirdPage" className="nav-link">
+                            <Button variant="outline-warning">SKILLS</Button>
+                        </Link>
+
+                        <Link to="/SecondPage" className="nav-link">
+                            <Button variant="outline-secondary">ABOUT</Button>
+                        </Link>
+                        <Link to="/Mainpage" className="nav-link">
+                            <Button variant="outline-primary">PROJECT</Button>
+                        </Link>
+
+                    </Container>
+                </Navbar>
+            </div>
+
+
+            <div className='mobile'>
+                <Navbar fixed="top" bg="dark" variant="dark" >
+                    <Container>
+
+                        <Navbar.Brand href="#">PORTFOLIO</Navbar.Brand>
+
                     
-                </Container>
-            </Navbar>
+                        </Container>
+                </Navbar>
+            </div>
+            <br/>
         </div>
     );
 }

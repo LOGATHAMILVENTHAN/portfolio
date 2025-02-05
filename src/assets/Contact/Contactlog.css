@@ -8,6 +8,7 @@
   width: 100vw;
   background-color:black;
   margin: 0;
+  margin-top: -10px;
   padding: 20px; /* Added padding for spacing on smaller devices */
   box-sizing: border-box;
 }
