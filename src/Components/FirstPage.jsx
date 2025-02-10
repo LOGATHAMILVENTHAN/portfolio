@@ -1,45 +1,46 @@
-import { color, motion } from 'framer-motion';
-import './First.css'
-import { Container, Row, Col, Button } from 'react-bootstrap';
+import { motion } from 'framer-motion';
+import './First.css';
+import { Row, Col } from 'react-bootstrap';
 import AboutMe from '../assets/About/SecondPage';
 import ThirdPage from '../assets/Skills/ThirdPAge';
 import Mainpage from '../assets/Projects/Mainpage';
 import Contactlog from '../assets/Contact/Contactlog';
-
-
 import { jsPDF } from "jspdf";
 
 const FirstPage = () => {
-  
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     const doc = new jsPDF();
-    
     doc.text("Resume", 10, 10);
-  
-    const imagePath = "/src/Images/Resume.png";
-  
-    const pageWidth = doc.internal.pageSize.width;
-    const pageHeight = doc.internal.pageSize.height;
-  
-    const imageWidth = pageWidth - 20;
-    const imageHeight = (imageWidth * 160) / 180;
-  
-    doc.addImage(imagePath, "PNG", 10, 20, imageWidth, imageHeight);
-  
-    doc.save("Logathamilventhan_Resume.pdf");
+
+    const imagePath = "/Images/Resume.png"; // Ensure image is in public/Images folder
+
+    // Convert image to Base64
+    const toDataURL = async (url) => {
+      const response = await fetch(url);
+      const blob = await response.blob();
+      return new Promise((resolve, reject) => {
+        const reader = new FileReader();
+        reader.onloadend = () => resolve(reader.result);
+        reader.onerror = reject;
+        reader.readAsDataURL(blob);
+      });
+    };
+
+    try {
+      const imgData = await toDataURL(imagePath);
+      doc.addImage(imgData, "PNG", 10, 20, 180, 160);
+      doc.save("Logathamilventhan_Resume.pdf");
+    } catch (error) {
+      console.error("Error loading image: ", error);
+    }
   };
-  
-  
-  
+
   return (
-
     <div className="video-background-container">
-
-
       <Row>
         <Col md={6} className="text-center">
-
+          {/* Name Animation */}
           <motion.h1 className="text-name">
             {Array.from('LOGATHAMILVENTHAN').map((letter, index) => (
               <motion.span
@@ -47,24 +48,23 @@ const FirstPage = () => {
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{
-
                   delay: index * 0.1,
                   type: "spring",
                   damping: 25,
                   stiffness: 150,
-                  repeat: Infinity, 
-                  repeatType: "reverse"  
+                  repeat: Infinity,
+                  repeatType: "reverse"
                 }}
                 style={{
-                  color: 'yellow', 
-                  textShadow: '2px 2px 5px white',
-                  textShadow: '2px 2px 5px white' 
+                  color: 'yellow',
+                  textShadow: '2px 2px 5px white'
                 }}
               >
                 {letter}
               </motion.span>
             ))}
           </motion.h1>
+
           <hr className='line' style={{
             color: 'white',
             marginLeft: '120px',
@@ -74,10 +74,7 @@ const FirstPage = () => {
             boxShadow: '0px 0px 20px 5px white'
           }} />
 
-
-
-          {/* Animated Paragraph (Portfolio) */}
-
+          {/* Role Animation */}
           <motion.h1 className="text-name">
             {Array.from('Mern Stack Developer').map((letter, index) => (
               <motion.span
@@ -89,19 +86,19 @@ const FirstPage = () => {
                   type: "spring",
                   damping: 25,
                   stiffness: 150,
-                  repeat: Infinity,  
-                  repeatType: "reverse"  
+                  repeat: Infinity,
+                  repeatType: "reverse"
                 }}
                 style={{
-                  color: 'blue',  
-                  textShadow: '2px 2px 5px white',
-                  textShadow: '2px 2px 5px white' 
+                  color: 'blue',
+                  textShadow: '2px 2px 5px white'
                 }}
               >
                 {letter}
               </motion.span>
             ))}
           </motion.h1>
+
           <hr className='line' style={{
             color: 'white',
             marginLeft: '120px',
@@ -110,12 +107,10 @@ const FirstPage = () => {
             backgroundColor: 'white',
             boxShadow: '0px 0px 20px 5px white'
           }} />
-          {/* Animated Button */}
+
+          {/* Resume Download Button */}
           <div className='resume'>
-            <motion.a
-            onClick={handleDownload}
-            >
-             
+            <motion.div onClick={handleDownload}>
               <motion.button
                 style={{
                   padding: '18px 36px',
@@ -133,12 +128,12 @@ const FirstPage = () => {
                   zIndex: 0,
                 }}
                 whileHover={{
-                  scale: 1.1, 
-                  boxShadow: '0 0 15px 5px rgba(0, 255, 255, 0.7)', // Glowing box-shadow
+                  scale: 1.1,
+                  boxShadow: '0 0 15px 5px rgba(0, 255, 255, 0.7)',
                   transition: { duration: 0.3, type: 'spring', stiffness: 300 },
                 }}
                 whileTap={{
-                  scale: 0.95, // Shrink the button on tap
+                  scale: 0.95,
                   transition: { duration: 0.1 },
                 }}
                 initial={{ opacity: 0 }}
@@ -152,7 +147,7 @@ const FirstPage = () => {
                     left: '-50%',
                     width: '300%',
                     height: '300%',
-                    background: 'linear-gradient(45deg, #00FF00,  #00FF00, #00FF00)',
+                    background: 'linear-gradient(45deg, #00FF00, #00FF00, #00FF00)',
                     animation: 'move 3s linear infinite',
                     filter: 'blur(10px)',
                     zIndex: -1,
@@ -160,36 +155,35 @@ const FirstPage = () => {
                 ></span>
                 <span>RESUME</span>
               </motion.button>
-            </motion.a>
+            </motion.div>
           </div>
         </Col>
       </Row>
 
       <hr style={{ color: "white" }} />
 
-      {/* About Page */}
+      {/* About Section */}
       <div style={{ backgroundColor: "black", color: "white" }}>
         <AboutMe />
       </div>
+
       <hr style={{ color: "white" }} />
 
-      {/* Skill Page */}
-      <div >
-
-        <ThirdPage />
-
-      </div>
-      <hr style={{ color: "white" }} />
-
-      {/* project page */}
+      {/* Skills Section */}
       <div>
-
-        <Mainpage />
-
+        <ThirdPage />
       </div>
+
       <hr style={{ color: "white" }} />
 
-      {/* Contact */}
+      {/* Projects Section */}
+      <div>
+        <Mainpage />
+      </div>
+
+      <hr style={{ color: "white" }} />
+
+      {/* Contact Section */}
       <div>
         <Contactlog />
       </div>
